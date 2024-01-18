@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 });
 
 
-app.post('/put', (req, res) => {
+app.post('/data', (req, res) => {
     const { key, value } = req.body;
 
     if (!key || !value) {
@@ -33,7 +33,7 @@ app.post('/put', (req, res) => {
 });
 
 
-app.get('/get/:key', (req, res) => {
+app.get('/data/:key', (req, res) => {
     const { key } = req.params;
 
     if (!key) {
